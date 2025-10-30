@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Póster generativo MPC</title>
-  <link rel="shortcut icon" href="img/mega.png" type="image/x-icon">
+  <title>Póster audioreactivo HMA</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
   <main class="tarjeta">
-    <h1>Póster generativo molón</h1>
+    <h1>A CRIDAR!</h1>
 
     <div id="barra-controles">
       <button id="botonCambiarPaleta">Cambiar paleta</button>
       <button id="botonLimpiar">Limpiar</button>
       <button id="botonGuardar">Guardar PNG</button>
+      <button id="botonGrabar">Haz click para grabar <span id="estadoGrabar">OFF</span></button>
     </div>
 
     <div id="contenedor-p5"></div>
   </main>
-
-  <!-- p5 por CDN -->
+  
+  <!-- p5.js y p5.sound -->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.9/lib/addons/p5.sound.min.js"></script>
 
-  <script src="poster.js"></script>
+  <script src="boceto.js"></script>
 </body>
 </html>
