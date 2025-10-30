@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --fondo1: #ff006e;
+  --fondo2: #8338ec;
+  --fondo3: #3a86ff;
+  --texto: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--texto);
+  background: linear-gradient(45deg, var(--fondo1), var(--fondo2), var(--fondo3));
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* 🔮 Animació del gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.tarjeta {
+  width: 100vw;
+  height: 100vh;
+  background: transparent; /* deixa veure el degradat del body */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#barra-controles {
+  display: flex;
+  gap: .5rem;
+  margin: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  border: 1px solid #ffffff80;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+#contenedor-p5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+/* ✨ Títol amb efecte de volum 3D */
+h1 {
+  text-align: center;
+  font-size: 5em;
+  margin-top: 0.5em;
+  color: white;
+  text-shadow:
+    0 2px 0 #b800ff,
+    0 4px 0 #a000ff,
+    0 6px 0 #8000ff,
+    0 8px 0 #5000ff,
+    0 10px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 4px;
+  animation: pop 1.5s ease-in-out infinite alternate;
+}
+
+/* 💥 Animació suau de "rebote" del títol */
+@keyframes pop {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
